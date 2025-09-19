@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comment System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #comment-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    #comment-form input, #comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    #comment-form button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #comment-form button:hover {
+      background: #45a049;
+    }
+
+    #clear-all {
+      background: #f44336;
+    }
+
+    #clear-all:hover {
+      background: #da190b;
+    }
+
+    #comments {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .comment {
+      background: #fff;
+      border-left: 5px solid #4CAF50;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .comment .meta {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .comment .body {
+      font-size: 1em;
+      white-space: pre-wrap;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comment System</h1>
+  <form id="comment-form">
+    <input type="text" id="name" placeholder="Emri (opsional)">
+    <textarea id="message" rows="3" placeholder="Shkruaj koment..."></textarea>
+    <button type="submit">Shto Komentin</button>
+    <button type="button" id="clear-all">Fshi të gjitha komentet</button>
+  </form>
+
+  <div id="comments"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
